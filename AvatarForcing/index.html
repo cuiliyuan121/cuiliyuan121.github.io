@@ -121,6 +121,11 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
         }
+        .link-btn[aria-disabled="true"] {
+            opacity: 0.6;
+            cursor: default;
+            pointer-events: none;
+        }
 
         /* Main Content */
         .main-content {
@@ -204,6 +209,26 @@
         .demo-description {
             color: #aaa;
             font-size: 0.9rem;
+        }
+
+        .bibtex-box {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: #16181b;
+            border: 1px solid #2a2b2e;
+            border-radius: 16px;
+            padding: 18px 20px;
+            overflow-x: auto;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .bibtex-box pre {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: #ddd;
+            white-space: pre;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
         }
 
         .teaser-image {
@@ -857,10 +882,10 @@
                 <span class="affil-note">‡ This work was conducted during the author's internship at Kling Team, Kuaishou Technology.</span>
             </div>
             <div class="links header-links">
-                <a class="link-btn" href="" target="_blank" rel="noopener noreferrer">
+                <a class="link-btn" href="https://arxiv.org/abs/2603.14331" target="_blank" rel="noopener noreferrer">
                     <i class="fa-solid fa-file-lines"></i> arXiv
                 </a>
-                <a class="link-btn" href="" target="_blank" rel="noopener noreferrer">
+                <a class="link-btn" href="#" aria-disabled="true">
                     <i class="fa-brands fa-github"></i> Code (coming soon)
                 </a>
             </div>
@@ -1089,6 +1114,22 @@
                             <source src="./video/merged.mp4" type="video/mp4">
                         </video>
                     </div>
+                </div>
+            </div>
+
+            <!-- BibTeX -->
+            <div class="section" id="bibtex">
+                <h2 class="section-title">BibTeX</h2>
+                <div class="bibtex-box">
+<pre>@misc{cui2026avatarforcingonestepstreamingtalking,
+      title={AvatarForcing: One-Step Streaming Talking Avatars via Local-Future Sliding-Window Denoising}, 
+      author={Liyuan Cui and Wentao Hu and Wenyuan Zhang and Zesong Yang and Fan Shi and Xiaoqiang Liu},
+      year={2026},
+      eprint={2603.14331},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.14331}, 
+}</pre>
                 </div>
             </div>
         </div>
